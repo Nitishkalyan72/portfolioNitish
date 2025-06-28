@@ -31,6 +31,7 @@ This project is a scalable, modular, and responsive portfolio website designed f
 
 ## Features
 
----
-
-See `/docs` for more details and setup instructions. 
+	•	🚧 Portfolio under construction.
+	•	⚒️ Work in progress.
+	•	🔧 Building... Stay tuned!
+	•	🚀 Coming soon.
