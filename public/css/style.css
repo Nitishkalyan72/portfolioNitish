@@ -1,4 +1,4 @@
-/* Base styles for responsive portfolio */
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, 'Roboto', sans-serif;
@@ -26,7 +26,7 @@ a, button {
   }
 }
 
-/* Netflix-inspired Header Styles (Updated) */
+/* Header Style (Updated) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 #main-header {
@@ -499,7 +499,6 @@ a, button {
   }
 }
 
-/* Remove portfolio and dropdown icons */
 .icon.portfolio, .icon.dropdown { background-image: none; }
 .chevron {
   margin-left: auto;

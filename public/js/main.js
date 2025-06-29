@@ -1,17 +1,14 @@
-// Main JS for portfolio UI and transitions
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Example: Smooth fade-in
+  // Smooth fade-in
   document.body.style.opacity = 0;
   setTimeout(() => {
     document.body.style.transition = 'opacity 0.8s';
     document.body.style.opacity = 1;
   }, 100);
 
-  // Add more UI logic here
 });
 
-// Header scroll effect: transparent background on scroll
+// Header scroll effect- transparent background on scroll
 const header = document.getElementById('main-header');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
