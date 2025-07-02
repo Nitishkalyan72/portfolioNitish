@@ -1,0 +1,199 @@
+/* Netflix-inspired dark homepage styles for hero section */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0a0a0f;
+  color: #fff;
+  font-family: 'Netflix Sans', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+#homepage-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.hero-section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0a0a0f 60%, #18181f 100%);
+}
+
+#hero-bg-canvas {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(1.5px) brightness(0.9);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  background: rgba(20, 20, 28, 0.65);
+  border-radius: 2rem;
+  box-shadow: 0 8px 48px 0 rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+}
+
+.hero-name {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  text-shadow: 0 0 24px #e50914, 0 2px 8px #000;
+  line-height: 1.1;
+}
+
+.hero-profession {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e5e5e5;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 1px;
+}
+
+.divider {
+  color: #e50914;
+  font-weight: 900;
+  margin: 0 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  min-height: 2.2em;
+  text-shadow: 0 0 8px #e50914, 0 2px 8px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+}
+
+#typewriter {
+  font-family: inherit;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 12px #e50914, 0 2px 8px #000;
+}
+
+.typewriter-cursor {
+  color: #e50914;
+  font-weight: 900;
+  font-size: 1.3em;
+  animation: blink-cursor 0.9s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.9em 2.2em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: box-shadow 0.25s, border 0.25s, background 0.25s, color 0.25s, transform 0.18s;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: none;
+  position: relative;
+}
+
+.cta-outline {
+  color: #e50914;
+  background: transparent;
+  border: 2.5px solid #e50914;
+  box-shadow: 0 0 16px 0 #e50914;
+}
+.cta-outline:hover, .cta-outline:focus {
+  background: rgba(229,9,20,0.08);
+  box-shadow: 0 0 32px 4px #e50914, 0 2px 16px rgba(0,0,0,0.3);
+  border-width: 3.5px;
+  transform: scale(1.07);
+}
+
+.cta-solid {
+  color: #fff;
+  background: #e50914;
+  border: 2.5px solid #e50914;
+  box-shadow: 0 0 24px 0 #e50914;
+}
+.cta-solid:hover, .cta-solid:focus {
+  background: #b0060f;
+  box-shadow: 0 0 48px 8px #e50914, 0 2px 16px rgba(0,0,0,0.3);
+  animation: pulse-glow 0.7s infinite alternate;
+  border-width: 3.5px;
+  transform: scale(1.07);
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 24px 0 #e50914; }
+  to { box-shadow: 0 0 48px 8px #e50914; }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero-content {
+    padding: 2rem 0.7rem 1.5rem 0.7rem;
+  }
+  .hero-name {
+    font-size: 2.2rem;
+  }
+  .hero-profession {
+    font-size: 1.1rem;
+  }
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  .hero-cta {
+    gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1.2rem 0.2rem 1rem 0.2rem;
+    border-radius: 1.1rem;
+  }
+  .hero-name {
+    font-size: 1.3rem;
+  }
+  .hero-profession {
+    font-size: 0.9rem;
+  }
+  .hero-tagline {
+    font-size: 0.85rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+} 
